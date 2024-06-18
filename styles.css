@@ -1,5 +1,3 @@
-Sara Pedersen
-
 .quiz-container {
     /* Indstiller skrifttypen til Work Sans eller sans-serif som backup */
     font-family: work sans, sans-serif;
@@ -36,7 +34,7 @@ Sara Pedersen
 /* Stil for individuelle knapper */
 button {
     /* Indstiller baggrundsfarven til en grøn farve */
-    background-color: #00D8B9;
+    background-color: #F64462;
     /* Indstiller tekstfarven til hvid */
     color: white;
     /* Fjerner kantlinjer */
@@ -56,7 +54,7 @@ button {
 /* Stil for knapperne, når musen er over dem */
 button:hover {
     /* Ændrer baggrundsfarven til en rød farve ved hover */
-    background-color: #F64462;
+    background-color: #00D8B9;
 }
 
 /* Stil for at skjule elementer */

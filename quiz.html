@@ -1,47 +1,64 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <!-- Angiver indstillinger, så layoutet passer til skærmstørrelsen -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Dokumentets titel, som vises i browserens fane -->
-    <title>True or False Quiz</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Hovedbeholderen for quizindholdet -->
-    <div class="quiz-container">
-        <!-- Hovedoverskriften for quizzen -->
-        <h1>Sandhed eller myte?</h1>
-        <!-- Beholder til spørgsmålet -->
-        <div id="question-container">
-            <!-- Element, der viser spørgsmålet -->
-            <div id="question"></div>
-            <!-- Knapper til at vælge svar -->
-            <div class="buttons">
-                <!-- Knap til at vælge "sand" som svar og kalder funktionen selectAnswer med værdien true -->
-                <button onclick="selectAnswer(true)">Sandt</button>
-                <!-- Knap til at vælge "myte" som svar og kalder funktionen selectAnswer med værdien false -->
-                <button onclick="selectAnswer(false)">Myte</button>
-            </div>
-        </div>
-        <!-- Beholder til resultatet, som er skjult som standard (skjult ved hjælp af klassen "hide") -->
-        <div id="result-container" class="hide">
-            <!-- Element, der viser resultatet (rigtigt eller forkert) -->
-            <div id="result"></div>
-            <!-- Element, der viser en forklaring på svaret -->
-            <div id="explanation"></div>
-            <!-- Beholder til knapper til næste spørgsmål og genstart -->
-            <div class="buttons">
-                <!-- Knap til at gå til næste spørgsmål og kalder funktionen nextQuestion -->
-                <button onclick="nextQuestion()">Næste spørgsmål</button>
-                <!-- Knap til at genstarte quizzen, som er skjult som standard (skjult ved hjælp af klassen "hide") -->
-                <button class="hide" id="retryButton" onclick="restartQuiz()">Prøv igen</button>
-            </div>
-        </div>
-    </div>
-</body>
-    <!-- JavaScript, der indeholder logikken til quizzen -->
-    <script src="script.js"></script>
-</body>
-</html>
+.quiz-container {
+    /* Indstiller skrifttypen til Work Sans eller sans-serif som backup */
+    font-family: work sans, sans-serif;
+    /* Indstiller flexbox-layout for at arrangere indholdet vertikalt */
+    display: flex;
+    /* Indstiller retningen for flex-elementer til kolonne (vertikal) */
+    flex-direction: column;
+    /* Centrerer indholdet horisontalt */
+    align-items: center;
+    /* Centrerer indholdet vertikalt */
+    justify-content: center;
+    /* Tilføjer indvendig afstand på 40px */
+    padding: 40px;
+    /* Indstiller baggrundsfarven til hvid */
+    background: white;
+    /* Giver hjørnerne en radius på 8px for en afrundet effekt */
+    border-radius: 8px;
+    /* Tilføjer en skyggeeffekt med 20px slør og let grå farve */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Centrerer tekst i quiz-containeren */
+    text-align: center;
+    /* Indstiller maksimal bredde på containeren til 900px */
+    max-width: 900px;
+    /* Tilføjer margin for at give lidt plads rundt om containeren */
+    margin: 20px auto;
+}
+
+/* Stil for knapperne */
+.buttons {
+    /* Tilføjer margin til toppen for at give plads mellem spørgsmålet og knapperne */
+    margin-top: 20px;
+}
+
+/* Stil for individuelle knapper */
+button {
+    /* Indstiller baggrundsfarven til en grøn farve */
+    background-color: #00D8B9;
+    /* Indstiller tekstfarven til hvid */
+    color: white;
+    /* Fjerner kantlinjer */
+    border: none;
+    /* Tilføjer indvendig afstand på 15px vertikalt og 30px horisontalt */
+    padding: 15px 30px;
+    /* Giver knapperne afrundede hjørner */
+    border-radius: 5px;
+    /* Skifter cursoren til en hånd, når man hover over knapper */
+    cursor: pointer;
+    /* Tilføjer margin på 10px mellem knapper */
+    margin: 10px;
+    /* Indstiller skriftstørrelsen til 18px */
+    font-size: 18px;
+}
+
+/* Stil for knapperne, når musen er over dem */
+button:hover {
+    /* Ændrer baggrundsfarven til en rød farve ved hover */
+    background-color: #F64462;
+}
+
+/* Stil for at skjule elementer */
+.hide {
+    /* Skjuler elementer med denne klasse ved at sætte display til none */
+    display: none;
+}
