@@ -1,64 +1,65 @@
-body {
-    /* Indstiller skrifttypen for hele dokumentet */
-    font-family: work sans, sans-serif;
-    /* Indstiller flexbox-layout for body for at centrere indholdet */
-    display: flex;
-    /* Justerer indholdet horisontalt til center */
-    justify-content: center;
-    /* Justerer indholdet vertikalt til center */
-    align-items: center;
-    /* Indstiller højden på body til 100% af visningshøjden */
-    height: 100vh;
-    /* Fjerner standard margen */
-    margin: 0;
-    /* Indstiller baggrundsfarven på body  */
-    background-color: #f0f0f0;
-}
+Sara Pedersen
 
 .quiz-container {
-    /* Indstiller baggrundsfarven for quiz-containeren */
+    /* Indstiller skrifttypen til Work Sans eller sans-serif som backup */
+    font-family: work sans, sans-serif;
+    /* Indstiller flexbox-layout for at arrangere indholdet vertikalt */
+    display: flex;
+    /* Indstiller retningen for flex-elementer til kolonne (vertikal) */
+    flex-direction: column;
+    /* Centrerer indholdet horisontalt */
+    align-items: center;
+    /* Centrerer indholdet vertikalt */
+    justify-content: center;
+    /* Tilføjer indvendig afstand på 40px */
+    padding: 40px;
+    /* Indstiller baggrundsfarven til hvid */
     background: white;
-    /* Indstiller indvendig afstand til 20px */
-    padding: 20px;
     /* Giver hjørnerne en radius på 8px for en afrundet effekt */
     border-radius: 8px;
-    /* Tilføjer en skyggeeffekt med 10px slør og let grå farve */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Tilføjer en skyggeeffekt med 20px slør og let grå farve */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     /* Centrerer tekst i quiz-containeren */
     text-align: center;
-    max-width: 900px; /* Øget bredde */
-    margin: 20px auto; /* Tilføjet margin for at give lidt plads rundt om containeren */
+    /* Indstiller maksimal bredde på containeren til 900px */
+    max-width: 900px;
+    /* Tilføjer margin for at give lidt plads rundt om containeren */
+    margin: 20px auto;
 }
 
+/* Stil for knapperne */
 .buttons {
-    /* Tilføjer en margen til toppen for at give plads mellem spørgsmål og knapper */
+    /* Tilføjer margin til toppen for at give plads mellem spørgsmålet og knapperne */
     margin-top: 20px;
 }
 
+/* Stil for individuelle knapper */
 button {
-    /* Indstiller baggrundsfarven på knapper til blå */
+    /* Indstiller baggrundsfarven til en grøn farve */
     background-color: #00D8B9;
     /* Indstiller tekstfarven til hvid */
     color: white;
     /* Fjerner kantlinjer */
     border: none;
-    /* Tilføjer indvendig afstand på 10px vertikalt og 20px horisontalt */
+    /* Tilføjer indvendig afstand på 15px vertikalt og 30px horisontalt */
     padding: 15px 30px;
     /* Giver knapperne afrundede hjørner */
     border-radius: 5px;
     /* Skifter cursoren til en hånd, når man hover over knapper */
     cursor: pointer;
-    /* Tilføjer margen på 5px mellem knapper */
+    /* Tilføjer margin på 10px mellem knapper */
     margin: 10px;
-    /* Indstiller skriftstørrelsen til 16px */
+    /* Indstiller skriftstørrelsen til 18px */
     font-size: 18px;
 }
 
+/* Stil for knapperne, når musen er over dem */
 button:hover {
-    /* Ændrer baggrundsfarven på knapper ved hover */
+    /* Ændrer baggrundsfarven til en rød farve ved hover */
     background-color: #F64462;
 }
 
+/* Stil for at skjule elementer */
 .hide {
     /* Skjuler elementer med denne klasse ved at sætte display til none */
     display: none;

@@ -1,25 +1,40 @@
-// Array med spørgsmål, svar og forklaringer til quizzen
-const questions = [
+  // Array med spørgsmål, svar og forklaringer til quizzen
+  const questions = [
     {
-        question: "Alkohol er en stimulant.",
+        question: "Alkohol dræber hjerneceller.",
         correctAnswer: false,
-        explanation: "Falsk. Alkohol er faktisk en depressant, ikke en stimulant."
+        explanation: "Alkohol skader ikke direkte hjerneceller. Dog kan overdreven alkoholforbrug skade hjernen og forårsage forskellige sundhedsmæssige problemer."
     },
     {
         question: "Det er farligt at blande alkohol med energidrikke.",
         correctAnswer: true,
-        explanation: "Sandt. At blande alkohol med energidrikke kan maskere virkningerne af alkohol og føre til overforbrug."
+        explanation: "At blande alkohol med energidrikke kan maskere virkningerne af alkohol og føre til overforbrug."
     },
     {
-        question: "Alkoholindtag kan hjælpe med at forbedre din søvnkvalitet.",
+        question: "At spise en stor måltid før du drikker, vil forhindre tømmermænd",
         correctAnswer: false,
-        explanation: "Falsk. Selvom alkohol kan hjælpe dig med at falde i søvn, forstyrrer det den dybe søvnfase og kan resultere i dårlig søvnkvalitet."
+        explanation: "Mad kan forsinke optagelsen af alkohol, men det forhindrer ikke nødvendigvis tømmermænd. Det kan dog reducere intensiteten."
+    },
+    {
+        question: "Alkohol påvirker hjernen 6 minutter efter indtagelse",
+        correctAnswer: true,
+        explanation: "Når du indtager alkohol, absorberes det hurtigt i blodbanen gennem mave og tarm, så på blot 6 minutter kan alkohol nå hjernen"
+    },
+    {
+        question: "Alkohol varmer dig op",
+        correctAnswer: false,
+        explanation: "Alkohol får blodkarrene til at udvide sig, hvilket kan give en følelse af varme. Men det sænker din kropstemperatur, da varmen går tabt gennem huden"
     },
     {
         question: "Alkohol kan påvirke din evne til at træffe beslutninger.",
         correctAnswer: true,
-        explanation: "Sandt. Alkohol påvirker hjernens funktioner og kan nedsætte din dømmekraft og beslutningstagning."
-    }
+        explanation: "Alkohol påvirker hjernens funktioner og kan nedsætte din dømmekraft og beslutningstagning."
+    },
+    {
+        question: "At drikke alkohol hjælper dig med at sove bedre",
+        correctAnswer: false,
+        explanation: "Alkohol kan hjælpe dig med at falde i søvn hurtigere, men det forstyrrer søvnkvaliteten og kan føre til en dårligere nats søvn."
+    },
 ];
 
 // Variabel til at holde styr på det aktuelle spørgsmål
@@ -31,6 +46,7 @@ const resultContainer = document.getElementById('result-container');
 const questionElement = document.getElementById('question');
 const resultElement = document.getElementById('result');
 const explanationElement = document.getElementById('explanation');
+const retryButton = document.getElementById('retryButton');
 
 // Funktion til at vise det aktuelle spørgsmål
 function showQuestion() {
@@ -69,6 +85,8 @@ function nextQuestion() {
         explanationElement.innerText = "";
         // Skjuler knappen til næste spørgsmål
         document.querySelector('button[onclick="nextQuestion()"]').classList.add('hide');
+        // Viser knappen til at starte quizzen igen
+        retryButton.classList.remove('hide');
     }
 }
 
@@ -80,6 +98,8 @@ function restartQuiz() {
     questionContainer.classList.remove('hide');
     // Viser knappen til næste spørgsmål
     document.querySelector('button[onclick="nextQuestion()"]').classList.remove('hide');
+    // Skjuler knappen til at starte quizzen igen
+    retryButton.classList.add('hide');
     showQuestion();
 }
 
