@@ -1,6 +1,6 @@
 body {
     /* Indstiller skrifttypen for hele dokumentet */
-    font-family: Arial, sans-serif;
+    font-family: work sans, sans-serif;
     /* Indstiller flexbox-layout for body for at centrere indholdet */
     display: flex;
     /* Justerer indholdet horisontalt til center */
@@ -35,7 +35,7 @@ body {
 
 button {
     /* Indstiller baggrundsfarven på knapper til blå */
-    background-color: #007bff;
+    background-color: #00D8B9;
     /* Indstiller tekstfarven til hvid */
     color: white;
     /* Fjerner kantlinjer */
@@ -54,7 +54,7 @@ button {
 
 button:hover {
     /* Ændrer baggrundsfarven på knapper ved hover */
-    background-color: #0056b3;
+    background-color: #F64462;
 }
 
 .hide {
