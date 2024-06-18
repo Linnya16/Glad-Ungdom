@@ -26,6 +26,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Centrerer tekst i quiz-containeren */
     text-align: center;
+    max-width: 900px; /* Øget bredde */
+    margin: 20px auto; /* Tilføjet margin for at give lidt plads rundt om containeren */
 }
 
 .buttons {
@@ -41,15 +43,15 @@ button {
     /* Fjerner kantlinjer */
     border: none;
     /* Tilføjer indvendig afstand på 10px vertikalt og 20px horisontalt */
-    padding: 10px 20px;
+    padding: 15px 30px;
     /* Giver knapperne afrundede hjørner */
     border-radius: 5px;
     /* Skifter cursoren til en hånd, når man hover over knapper */
     cursor: pointer;
     /* Tilføjer margen på 5px mellem knapper */
-    margin: 5px;
+    margin: 10px;
     /* Indstiller skriftstørrelsen til 16px */
-    font-size: 16px;
+    font-size: 18px;
 }
 
 button:hover {
