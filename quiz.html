@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <!-- Angiver indstillinger, så layoutet passer til skærmstørrelsen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dokumentets titel, som vises i browserens fane -->
+    <title>True or False Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Container for quizindholdet -->
+    <div class="quiz-container">
+        <!-- Overskriften for quizzen -->
+        <h1>Alkohol Quiz</h1>
+        <!-- Container til spørgsmålet -->
+        <div id="question-container">
+            <!-- Element, der viser spørgsmålet -->
+            <div id="question"></div>
+            <!-- Knapper til at vælge svar -->
+            <div class="buttons">
+                <!-- Knap til at vælge "sand" som svar og kalder funktionen selectAnswer med værdien true -->
+                <button onclick="selectAnswer(true)">Sandt</button>
+                <!-- Knap til at vælge "falsk" som svar og kalder funktionen selectAnswer med værdien false -->
+                <button onclick="selectAnswer(false)">Falsk</button>
+            </div>
+        </div>
+        <!-- Container til resultatet, som er skjult som standard (skjult ved hjælp af klassen "hide") -->
+        <div id="result-container" class="hide">
+            <!-- Element, der viser resultatet  -->
+            <div id="result"></div>
+            <!-- Element, der viser en forklaring på svaret -->
+            <div id="explanation"></div>
+            <!-- Knap til at gå til næste spørgsmål og kalder funktionen nextQuestion -->
+            <button onclick="nextQuestion()">Næste spørgsmål</button>
+            <!-- Knap til at genstarte quizzen og kalder funktionen restartQuiz -->
+            <button onclick="restartQuiz()">Prøv igen</button>
+        </div>
+    </div>
+    <!-- JavaScript, der indeholder logikken til quizzen -->
+    <script src="script.js"></script>
+</body>
+</html>

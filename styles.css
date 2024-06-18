@@ -1,0 +1,63 @@
+body {
+    /* Indstiller skrifttypen for hele dokumentet */
+    font-family: Arial, sans-serif;
+    /* Indstiller flexbox-layout for body for at centrere indholdet */
+    display: flex;
+    /* Justerer indholdet horisontalt til center */
+    justify-content: center;
+    /* Justerer indholdet vertikalt til center */
+    align-items: center;
+    /* Indstiller højden på body til 100% af visningshøjden */
+    height: 100vh;
+    /* Fjerner standard margen */
+    margin: 0;
+    /* Indstiller baggrundsfarven på body  */
+    background-color: #f0f0f0;
+}
+
+.quiz-container {
+    /* Indstiller baggrundsfarven for quiz-containeren */
+    background: white;
+    /* Indstiller indvendig afstand til 20px */
+    padding: 20px;
+    /* Giver hjørnerne en radius på 8px for en afrundet effekt */
+    border-radius: 8px;
+    /* Tilføjer en skyggeeffekt med 10px slør og let grå farve */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Centrerer tekst i quiz-containeren */
+    text-align: center;
+}
+
+.buttons {
+    /* Tilføjer en margen til toppen for at give plads mellem spørgsmål og knapper */
+    margin-top: 20px;
+}
+
+button {
+    /* Indstiller baggrundsfarven på knapper til blå */
+    background-color: #007bff;
+    /* Indstiller tekstfarven til hvid */
+    color: white;
+    /* Fjerner kantlinjer */
+    border: none;
+    /* Tilføjer indvendig afstand på 10px vertikalt og 20px horisontalt */
+    padding: 10px 20px;
+    /* Giver knapperne afrundede hjørner */
+    border-radius: 5px;
+    /* Skifter cursoren til en hånd, når man hover over knapper */
+    cursor: pointer;
+    /* Tilføjer margen på 5px mellem knapper */
+    margin: 5px;
+    /* Indstiller skriftstørrelsen til 16px */
+    font-size: 16px;
+}
+
+button:hover {
+    /* Ændrer baggrundsfarven på knapper ved hover */
+    background-color: #0056b3;
+}
+
+.hide {
+    /* Skjuler elementer med denne klasse ved at sætte display til none */
+    display: none;
+}
